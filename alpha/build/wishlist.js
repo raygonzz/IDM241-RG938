@@ -6,6 +6,7 @@ const addTooltip = document.getElementById('tooltip-add');
 const removeTooltip = document.getElementById('tooltip-remove');
 const feedbackNotice = document.getElementById('wishlist-feedback-notice');
 const removeFromDropdownBtn = document.getElementById('remove-from-wishlist');
+const manageWishlistBtn = document.getElementById('manage-wishlist');
 
 document.getElementById('wishlist-toggle-container').addEventListener('click', (event) => {
   if (event.target.closest('.dropdown-menu-item') || event.target.closest('#dropdown-chevron-btn')) {
@@ -41,4 +42,8 @@ removeFromDropdownBtn.addEventListener('click', () => {
     dropdownContainer.classList.add('hidden');
     addTooltip.classList.remove('hidden');
     removeTooltip.classList.add('hidden');
+});
+
+manageWishlistBtn.addEventListener('click', () => {
+    window.open('https://www.google.com/', '_blank'); 
 });
