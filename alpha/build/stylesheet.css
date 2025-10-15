@@ -275,6 +275,7 @@ footer {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
 }
 
 .wishlist_added_temp_notice::before {
