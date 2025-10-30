@@ -1,0 +1,87 @@
+html {
+    font-family: Arial, sans-serif;
+    background-color: #26262c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited {
+    color: #00adee; /* default link color */
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.description p {
+    margin-left: 21vw;
+    text-align: left;
+    line-height: 200%;
+}
+
+.container {
+	max-width: 1000px; 
+	width: 90%;         
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container h1 {
+    font-size: 3rem;
+}
+
+.container h1, p {
+    text-align: center;
+}
+
+.images h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 10vh;
+}
+
+.Triggers, .Rules, .Feedback, .Loops, .Modes {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-left: 20vw;
+}
+
+/* Nested list styling inside the description section */
+.description ul {
+    margin-left: 21vw; /* align lists with paragraph content */
+    padding-left: 1rem;
+}
+
+.description ul ul {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+    list-style-type: disc;
+    font-size: 0.95rem;
+}
+
+.description li {
+    margin-bottom: 0.25rem;
+    line-height: 2rem;
+}
+
+footer {
+    margin-top: 5rem;
+}
+
+.images video {
+    display: block;
+    margin-top: 3rem;
+    margin: 0 auto;
+}
+
