@@ -1,0 +1,334 @@
+html {
+    font-family: Arial, sans-serif;
+    background-color: #26262c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited {
+    color: #00adee;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.description p {
+    margin-left: 21vw;
+    text-align: left;
+    line-height: 200%;
+}
+
+.container {
+	max-width: 1000px; 
+	width: 90%;         
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container h1 {
+    font-size: 3rem;
+}
+
+.container h1, p {
+    text-align: center;
+}
+
+.images h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 5vh;
+}
+
+.Triggers, .Rules, .Feedback, .Loops, .Modes {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-left: 20vw;
+}
+
+.description ul {
+    margin-left: 21vw;
+    padding-left: 1rem;
+}
+
+.description ul ul {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+    list-style-type: disc;
+    font-size: 0.95rem;
+}
+
+.description li {
+    margin-bottom: 0.25rem;
+    line-height: 2rem;
+}
+
+footer {
+    margin-top: 5rem;
+}
+
+.images video {
+    display: block;
+    margin-top: 3rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.wishlist-area {
+    text-align: center;
+}
+
+#wishlist-toggle-container {
+  display: inline-flex;
+  align-items: flex-start;
+  height: 32px;
+}
+
+#wishlist-main-buttons {
+  position: relative;
+  width: 170px;
+  height: 100%;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.wishlist-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  padding: 1px;
+  text-decoration: none !important;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease, visibility 0.25s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.wishlist-btn.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wishlist-btn .label {
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 15px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.wishlist-btn .label img {
+    width: 16px;
+    height: 16px;
+}
+
+#wishlist-add-btn {
+    color: #67c1f5 !important;
+    background: rgba(103, 193, 245, 0.2);
+}
+
+#wishlist-add-btn:hover {
+    color: #fff !important;
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+}
+
+#wishlist-remove-btn {
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+  color: white !important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#wishlist-remove-btn:hover {
+    color: #fff !important;
+    background: linear-gradient(-60deg, #5c9ac3 5%, #8ed3f7 95%);
+}
+
+.wishlist-dropdown-container {
+    position: relative;
+    margin-left: 1px;
+    height: 100%;
+    z-index: 10;
+}
+
+.dropdown-chevron-btn {
+  position: relative;
+  color: #67c1f5;
+  font-size: 16px;
+  background: #417A9B;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-chevron-btn::after {
+  content: "▾";
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+}
+
+.wishlist-dropdown-container:hover .dropdown-chevron-btn::after {
+  transform: rotate(180deg);
+}
+
+.wishlist-dropdown-container:hover .dropdown-chevron-btn {
+    background: linear-gradient(120deg, #5c9ac3 5%, #8ed3f7 95%);
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    margin-left: -142px;
+    min-width: 165px;
+    background-color: #1e1e1e;
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 21;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.wishlist-dropdown-container:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu-item {
+    z-index: 22;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    padding-left: 5px;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    background: #1e1e1e;
+    color: #fff;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.dropdown-menu-item:hover {
+    background-color: #2D3F49;
+    color: #67C1F5;
+    border-radius: 5px;
+    border-color: #1E1E1E;
+}
+
+.wishlist-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  background: #BBC9D3;
+  color: #3d3d3f;
+  font-size: 11px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 12;
+  pointer-events: none;
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 275px;
+  overflow: hidden
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+
+#wishlist-tooltip[data-state="add"] #tooltip-text-add {
+  opacity: 1;
+  white-space: normal;
+  line-height: 1.3;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+#wishlist-tooltip[data-state="add"] {
+  width: 275px;
+  min-width: 230px;
+  height: 40px;
+  padding: 0;
+}
+
+#wishlist-tooltip[data-state="remove"] #tooltip-text-remove {
+  opacity: 1;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease 0.2s;
+}
+
+#wishlist-tooltip[data-state="remove"] {
+  width: 138px;
+  height: 24px;
+  padding: 0;
+}
+
+#wishlist-main-buttons:hover #wishlist-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}

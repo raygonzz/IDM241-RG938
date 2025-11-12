@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Build</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Beta Build</h1>
+        <p><a href="https://store.steampowered.com/app/2707930/Palia/" target="_blank">Link to a steam game.</a></p>
+    </div>
+    <div class="wishlist-area">
+        <div class="add-to-wishlist-area">
+            <div id="wishlist-toggle-container" class="steam-wishlist-container">
+
+                <div id="wishlist-main-buttons">
+                    <div class="wishlist-tooltip" id="wishlist-tooltip" data-state="add">
+                        <span class="tooltip-text" id="tooltip-text-add">
+                            Get notified by email when your wishlisted items get released or are on sale.
+                        </span>
+                        <span class="tooltip-text" id="tooltip-text-remove">
+                            Remove from your wishlist
+                        </span>
+                    </div>
+
+                    <button class="wishlist-btn" id="wishlist-add-btn">
+                        <span class="label">Add to your wishlist</span>
+                    </button>
+                    <button class="wishlist-btn on-wishlist hidden" id="wishlist-remove-btn">
+                        <span class="label">
+                            <img src="https://store.fastly.steamstatic.com/public/images/v6/ico/ico_selected.png" alt="steam checkmark">On wishlist</span>
+                    </button>
+
+                </div>
+
+                <div class="wishlist-dropdown-container hidden" id="wishlist-dropdown-container">
+                    <button class="dropdown-chevron-btn" id="dropdown-chevron-btn"></button>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <button class="dropdown-menu-item" id="manage-wishlist">Manage your wishlist</button>
+                        <button class="dropdown-menu-item" id="remove-from-wishlist">Remove from your wishlist</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="description">
+        <div>
+                <h1 class="Triggers">
+                    Triggers:
+                </h1>
+                <p><strong>Wishlist Button - Towards the bottom left, below the trailer of the game</strong></p>
+                <ul>
+                    <li>Hover On</li>
+                    <li>Hover Off</li>
+                    <li>Click</li>
+                    <li>Click Again</li>
+                </ul>
+                <p>Dropdown Arrow</p>
+                <ul>
+                    <li>Hover On</li>
+                    <li>Hover Off</li>
+                </ul>
+                <p>Dropdown Links</p>
+                <ul>
+                    <li>Hover On</li>
+                    <li>Hover Off</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="Rules">
+                    Rules:
+                </h1>
+                <p>Wishlist Button</p>
+                <ul>
+                    <li>Hover On:
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                            <li>Color changes to a gradient blue (-60deg, #417a9b 5%, #67c1f5 95%)</li>
+                        </ul>
+                    </li>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Cursor changes back to default</li>
+                            <li>Color changes back to original</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click:
+                        <ul>
+                            <li>Update the user's wishlist with the newly added game</li>
+                            <li>Button shrinks to show a button with a checkbox with "On Wishlist"</li>
+                            <li>Adds a dropdown arrow to the side of the button</li>
+                            <li>Color changes to a gradient blue (-60deg, #417a9b 5%, #67c1f5 95%)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click Again:
+                        <ul>
+                            <li>Update the user's wishlist and remove the game</li>
+                            <li>Button grows back to default</li>
+                            <li>Color changes back to default</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Dropdown Arrow</strong></p>
+                <ul>
+                    <li> Hover On:
+                        <ul>
+                            <li>Arrow turns white</li>
+                            <li>Rotates 180 degrees</li>
+                            <li>Background changes to a gradient blue (120deg, #5c9ac3 5%, #8ed3f7 95%)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Arrow returns to original color</li>
+                            <li>Rotates back to 0 degrees</li>
+                            <li>Background changes back to original</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Dropdown Links</strong></p>
+                <ul>
+                    <li>Hover On:
+                        <ul>
+                            <li>Color fades to #2D3F49 over 0.2s, also leaves room for a slight border</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Color fades back to original over 0.2s</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="Feedback">
+                    Feedback:
+                </h1>
+                <p>Wishlist Button</p>
+                <ul>
+                    <li>Hover On:
+                        <ul>
+                            <li>Cursor changes to pointer</li>
+                            <li>Color changes to a gradient blue (-60deg, #417a9b 5%, #67c1f5 95%)</li>
+                        </ul>
+                    </li>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Cursor changes back to default</li>
+                            <li>Color changes back to original</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click:
+                        <ul>
+                            <li>Button shrinks to show a button with a checkbox with "On Wishlist"</li>
+                            <li>Adds a dropdown arrow to the side of the button</li>
+                            <li>Color changes to a gradient blue (-60deg, #417a9b 5%, #67c1f5 95%)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click Again:
+                        <ul>
+                            <li>Button grows back to default</li>
+                            <li>Color changes back to default</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Dropdown Arrow</strong></p>
+                <ul>
+                    <li> Hover On:
+                        <ul>
+                            <li>Arrow turns white</li>
+                            <li>Rotates 180 degrees</li>
+                            <li>Background changes to a gradient blue (120deg, #5c9ac3 5%, #8ed3f7 95%)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Arrow returns to original color</li>
+                            <li>Rotates back to 0 degrees</li>
+                            <li>Background changes back to original</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Dropdown Links</strong></p>
+                <ul>
+                    <li>Hover On:
+                        <ul>
+                            <li>Color fades to #2D3F49 over 0.2s, also leaves room for a slight border</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Color fades back to original over 0.2s</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="Loops">
+                    Loops:
+                </h1>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="Modes">
+                    Modes:
+                </h1>
+                <p>Wishlist Button</p>
+                <ul>
+                    <li>Hover On:
+                        <ul>
+                            <li>Text box fades in from above wishlist button with "Get notified by email when
+                                your wishlisted items get released or are on sale."</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Hover Off:
+                        <ul>
+                            <li>Tooltip fades out above the wishlist button</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click:
+                        <ul>
+                            <li>Text box above the wishlist button shrinks
+                                to show different text with "Remove from your wishlist"</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Click Again:
+                        <ul>
+                            <li>Text box above wishlist button expands back to original text</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Dropdown Arrow</strong></p>
+                <ul>
+                    <li>Hover On:
+                        <ul>Dropdown options fade in over 0.25s</ul>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+</body>
+<script src="wishlist.js"></script>
+</html>
