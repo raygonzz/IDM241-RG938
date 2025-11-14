@@ -99,7 +99,6 @@ footer {
   position: relative;
   width: 170px;
   height: 100%;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -141,6 +140,11 @@ footer {
 .wishlist-btn .label img {
     width: 16px;
     height: 16px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.wishlist-btn .label img:hover {
+    transform: scale(1.2) translateY(-2px);
 }
 
 #wishlist-add-btn {
@@ -208,8 +212,8 @@ footer {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    margin-left: -142px;
-    min-width: 165px;
+    margin-left: -149px;
+    min-width: 175px;
     background-color: #1e1e1e;
     border-radius: 3px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
@@ -331,4 +335,27 @@ footer {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-note-container {
+    padding: 5px 8px 8px 8px;
+    background: #1e1e1e;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.dropdown-note-input {
+    width: 100%;
+    box-sizing: border-box;
+    background: #2D3F49;
+    border: 1px solid #1e1e1e;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-note-input:focus {
+    outline: none;
+    border-color: #67c1f5;
 }
