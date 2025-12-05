@@ -10,7 +10,6 @@
 <body>
     <div class="container">
         <h1>Welcome to the Final Build</h1>
-        <p><a href="https://store.steampowered.com/app/2707930/Palia/" target="_blank">Link to a steam game.</a></p>
     </div>
     
     <div class="wishlist-area">
@@ -18,6 +17,7 @@
             <div id="wishlist-toggle-container" class="steam-wishlist-container">
 
                 <div id="wishlist-main-buttons">
+    
                     <div class="wishlist-tooltip" id="wishlist-tooltip" data-state="add">
                         <span class="tooltip-text" id="tooltip-text-add">
                             Get notified by email when your wishlisted items get released or are on sale.
@@ -27,14 +27,15 @@
                         </span>
                     </div>
 
-                    <button class="wishlist-btn" id="wishlist-add-btn">
-                        <span class="label">Add to your wishlist</span>
-                    </button>
-                    <button class="wishlist-btn on-wishlist hidden" id="wishlist-remove-btn">
-                        <span class="label">
-                            <img class="checkmark" src="https://store.fastly.steamstatic.com/public/images/v6/ico/ico_selected.png" alt="steam checkmark">On wishlist</span>
-                    </button>
-
+                    <div class="btn-mask"> 
+                        <button class="wishlist-btn" id="wishlist-add-btn">
+                            <span class="label">Add to your wishlist</span>
+                        </button>
+                        <button class="wishlist-btn on-wishlist hidden" id="wishlist-remove-btn">
+                            <span class="label">
+                                <img class="checkmark" src="https://store.fastly.steamstatic.com/public/images/v6/ico/ico_selected.png" alt="steam checkmark">On wishlist</span>
+                        </button>
+                    </div> 
                 </div>
 
                 <div class="wishlist-dropdown-container hidden" id="wishlist-dropdown-container">
@@ -59,7 +60,7 @@
                 <h1 class="Triggers">
                     Triggers:
                 </h1>
-                <p><strong>Wishlist Button - Towards the bottom left, below the trailer of the game</strong></p>
+                <p><strong>Wishlist Button</strong></p>
                 <ul>
                     <li>Hover On</li>
                     <li>Hover Off</li>
@@ -110,7 +111,7 @@
                     <li>Click:
                         <ul>
                             <li>Update the user's wishlist with the newly added game</li>
-                            <li>Button shrinks to show a button with a checkbox with "On Wishlist"</li>
+                            <li>"On Wishlist" slides down and pushes the "Add to wishlist" text out of view</li>
                             <li>Adds a dropdown arrow to the side of the button</li>
                             <li>Color changes to a gradient blue (-60deg, #417a9b 5%, #67c1f5 95%)</li>
                         </ul>
@@ -120,7 +121,7 @@
                     <li>Click Again:
                         <ul>
                             <li>Update the user's wishlist and remove the game</li>
-                            <li>Button grows back to default</li>
+                            <li>"Add to wishlist" slides up and pushes the "On wishlist" text out of view</li>
                             <li>Color changes back to default</li>
                         </ul>
                     </li>
@@ -148,14 +149,14 @@
                 <ul>
                     <li>Hover On:
                         <ul>
-                            <li>Color fades to #2D3F49 over 0.2s, also leaves room for a slight border</li>
+                            <li>Color fades to #2D3F49 over 0.5s, also leaves room for a slight border</li>
                         </ul>
                     </li>
                 </ul>
                 <ul>
                     <li>Hover Off:
                         <ul>
-                            <li>Color fades back to original over 0.2s</li>
+                            <li>Color fades back to original over 0.5s</li>
                         </ul>
                     </li>
                 </ul>

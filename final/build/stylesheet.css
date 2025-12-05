@@ -11,6 +11,10 @@ a:link, a:visited {
     text-decoration: none;
 }
 
+h1 {
+  color: #67c1f5;
+}
+
 a:hover, a:focus {
     text-decoration: underline;
     outline: none;
@@ -101,6 +105,13 @@ footer {
   height: 100%;
 }
 
+.btn-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 
 .wishlist-btn {
   position: absolute;
@@ -116,7 +127,7 @@ footer {
   overflow: hidden;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.25s ease, visibility 0.25s ease, background 0.3s ease, color 0.3s ease;
+  transition: transform 0.5s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .wishlist-btn.hidden {
@@ -176,6 +187,7 @@ footer {
     z-index: 10;
 }
 
+
 .dropdown-chevron-btn {
   position: relative;
   color: #67c1f5;
@@ -220,7 +232,7 @@ footer {
     z-index: 21;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .wishlist-dropdown-container:hover .dropdown-menu {
@@ -242,7 +254,7 @@ footer {
     font-size: 12px;
     cursor: pointer;
     white-space: nowrap;
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.5s ease, background-color 0.5s ease, border-color 0.2s ease;
 }
 
 .dropdown-menu-item:hover {
@@ -358,4 +370,20 @@ footer {
 .dropdown-note-input:focus {
     outline: none;
     border-color: #67c1f5;
+}
+
+#wishlist-add-btn.hidden {
+    transform: translateY(100%);
+    opacity: 1; 
+    visibility: visible;
+}
+
+#wishlist-remove-btn.hidden {
+    transform: translateY(-100%);
+    opacity: 1; 
+    visibility: visible;
+}
+
+#wishlist-add-btn, #wishlist-remove-btn {
+    transform: translateY(0);
 }
